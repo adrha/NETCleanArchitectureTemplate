@@ -1,0 +1,60 @@
+{
+  "author": "Adrian Hayoz",
+  "name": "Clean architecture template with postgres",
+  "description": "Clean architecture template with EF-core and postgres. Includes a Gitlab-pipeline",
+  "identity": "Adrha.Cleanarch.Base",
+  "shortName": "cleanarchapi-base",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!Docker)",
+          "exclude": [
+            "src/CityManager.Api/Dockerfile",
+            "src/CityManager.Api/.dockerignore"
+          ]
+        },
+        {
+          "condition": "(!Tests)",
+          "exclude": [
+            "test/CityManager.FunctionalTests/**/*",
+            "test/CityManager.UnitTests/**/*"
+          ]
+        },
+        {
+          "condition": "(!Pipeline)",
+          "exclude": [
+            ".gitlab-ci.yml"
+          ]
+        }
+      ]
+    }
+  ],
+  "symbols": {
+    "Docker": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Adds an optimised Dockerfile to add the ability to build a Docker image.",
+      "defaultValue": "true"
+    },
+    "Tests": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Adds an integration project and unit test projects."
+    },
+    "Pipeline": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Add basic test and build pipeline for Gitlab to repository"
+    }
+  },
+  "sourceName": "CityManager",
+  "defaultName": "WebApi1",
+  "preferNameDirectory": "false"
+}

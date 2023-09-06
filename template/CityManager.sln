@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityManager.Api", "src\CityManager.Api\CityManager.Api.csproj", "{A43830F5-8785-4B6A-B8AC-75AE8F31038F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9F1928E4-F5C2-4DF2-B752-E892E3EBD351}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{BBE52A9E-F70D-42DA-A094-601EA4DCB40F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityManager.Application", "src\CityManager.Application\CityManager.Application.csproj", "{8ABD192E-31E6-47BF-AC5A-835D7D2C1604}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityManager.Domain", "src\CityManager.Domain\CityManager.Domain.csproj", "{E608AC46-48E0-48A0-A5F2-FB54C4ED0913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityManager.Infrastructure", "src\CityManager.Infrastructure\CityManager.Infrastructure.csproj", "{3D15FA4A-B2AC-44EB-8336-E44FE1F3622C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityManager.FunctionalTests", "test\CityManager.FunctionalTests\CityManager.FunctionalTests.csproj", "{EF83AEE4-2D59-444D-8CD8-9F5FA2C4A61B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityManager.UnitTests", "test\CityManager.UnitTests\CityManager.UnitTests.csproj", "{61DF20B1-7A1B-4406-A678-548F68E1D5F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{7CF89FD7-CE34-4926-8271-4C1C5D6BF21F}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+		.gitlab-ci.yml = .gitlab-ci.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A43830F5-8785-4B6A-B8AC-75AE8F31038F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A43830F5-8785-4B6A-B8AC-75AE8F31038F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A43830F5-8785-4B6A-B8AC-75AE8F31038F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A43830F5-8785-4B6A-B8AC-75AE8F31038F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ABD192E-31E6-47BF-AC5A-835D7D2C1604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ABD192E-31E6-47BF-AC5A-835D7D2C1604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ABD192E-31E6-47BF-AC5A-835D7D2C1604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ABD192E-31E6-47BF-AC5A-835D7D2C1604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E608AC46-48E0-48A0-A5F2-FB54C4ED0913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E608AC46-48E0-48A0-A5F2-FB54C4ED0913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E608AC46-48E0-48A0-A5F2-FB54C4ED0913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E608AC46-48E0-48A0-A5F2-FB54C4ED0913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D15FA4A-B2AC-44EB-8336-E44FE1F3622C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D15FA4A-B2AC-44EB-8336-E44FE1F3622C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D15FA4A-B2AC-44EB-8336-E44FE1F3622C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D15FA4A-B2AC-44EB-8336-E44FE1F3622C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF83AEE4-2D59-444D-8CD8-9F5FA2C4A61B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF83AEE4-2D59-444D-8CD8-9F5FA2C4A61B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF83AEE4-2D59-444D-8CD8-9F5FA2C4A61B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF83AEE4-2D59-444D-8CD8-9F5FA2C4A61B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61DF20B1-7A1B-4406-A678-548F68E1D5F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61DF20B1-7A1B-4406-A678-548F68E1D5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61DF20B1-7A1B-4406-A678-548F68E1D5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61DF20B1-7A1B-4406-A678-548F68E1D5F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A43830F5-8785-4B6A-B8AC-75AE8F31038F} = {9F1928E4-F5C2-4DF2-B752-E892E3EBD351}
+		{8ABD192E-31E6-47BF-AC5A-835D7D2C1604} = {9F1928E4-F5C2-4DF2-B752-E892E3EBD351}
+		{E608AC46-48E0-48A0-A5F2-FB54C4ED0913} = {9F1928E4-F5C2-4DF2-B752-E892E3EBD351}
+		{3D15FA4A-B2AC-44EB-8336-E44FE1F3622C} = {9F1928E4-F5C2-4DF2-B752-E892E3EBD351}
+		{EF83AEE4-2D59-444D-8CD8-9F5FA2C4A61B} = {BBE52A9E-F70D-42DA-A094-601EA4DCB40F}
+		{61DF20B1-7A1B-4406-A678-548F68E1D5F2} = {BBE52A9E-F70D-42DA-A094-601EA4DCB40F}
+	EndGlobalSection
+EndGlobal

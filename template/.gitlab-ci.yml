@@ -1,0 +1,61 @@
+image: docker
+
+stages:
+  - test
+  - package
+
+variables:
+  containerVersion: $CI_COMMIT_SHORT_SHA-$CI_PIPELINE_IID
+
+unittests:
+  stage: test
+  image: mcr.microsoft.com/dotnet/sdk:7.0
+  script:
+    - "cd test/CityManager.UnitTests"
+    - "dotnet restore"
+    - 'dotnet test --logger "junit;LogFilePath=./TestResults/CityManager.API.UnitTests.xml;MethodFormat=Class;FailureBodyFormat=Verbose"'
+  artifacts:
+    when: always
+    expire_in: 1 week
+    paths:
+        - test/CityManager.UnitTests/TestResults/CityManager.API.UnitTests.xml
+    reports:
+        junit:
+            - test/CityManager.UnitTests/TestResults/CityManager.API.UnitTests.xml
+              
+functionaltests:
+  stage: test
+  image: mcr.microsoft.com/dotnet/sdk:7.0
+  script:
+    - "cd test/CityManager.FunctionalTests"
+    - "dotnet restore"
+    - 'dotnet test --logger "junit;LogFilePath=./TestResults/CityManager.FunctionalTests.xml;MethodFormat=Class;FailureBodyFormat=Verbose"'
+  artifacts:
+    when: always
+    expire_in: 1 week
+    paths:
+      - test/CityManager.UnitTests/TestResults/CityManager.API.FunctionalTests.xml
+    reports:
+      junit:
+        - test/CityManager.UnitTests/TestResults/CityManager.API.FunctionalTests.xml
+
+package:
+  stage: package  
+  only:
+    changes:
+      - src/CityManager.Api/**/*
+      - src/CityManager.Application/**/*
+      - src/CityManager.Domain/**/*
+      - src/CityManager.Infrastructure/**/*
+      - src/CityManager.Api.sln
+      - compose/**/*
+      - .gitlab-ci.yml
+  before_script:
+    - echo $CI_JOB_TOKEN | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
+  script:
+    - docker build --pull --build-arg version_variable=$containerVersion -f src/CityManager.Api/Dockerfile -t $CI_REGISTRY_IMAGE:$containerVersion -t $CI_REGISTRY_IMAGE:latest ./src
+    - docker push $CI_REGISTRY_IMAGE:$containerVersion
+    - docker push $CI_REGISTRY_IMAGE:latest
+
+  after_script:
+    - docker logout $CI_REGISTRY
