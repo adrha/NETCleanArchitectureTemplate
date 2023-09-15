@@ -11,24 +11,19 @@ namespace CityManager.Application.Services;
 public class CityService : ICityService
 {
     private readonly ICityRepository _cityRepository;
-    private readonly CityManagerOptions _CityManagerOptions;
+    private readonly CityManagerOptions _cityManagerOptions;
     private readonly IMapper _mapper;
     
     public CityService(ICityRepository cityRepository, IOptions<CityManagerOptions> options, IMapper mapper)
     {
         _cityRepository = cityRepository;
-        _CityManagerOptions = options.Value;
+        _cityManagerOptions = options.Value;
         _mapper = mapper;
     }
     
     public async Task<City> CreateCityAsync(CityDto city)
     {
         ApplyCityDefaultNameIfEmpty(ref city);
-
-        if (city.Id == null || city.Id == Guid.Empty)
-        {
-            city.Id = Guid.NewGuid();
-        }
 
         var mapped = _mapper.Map<City>(city);
         return await _cityRepository.CreateCityAsync(mapped);
@@ -46,7 +41,7 @@ public class CityService : ICityService
     {
         if (string.IsNullOrWhiteSpace(city.Name))
         {
-            city.Name = _CityManagerOptions.DefaultCityName;
+            city.Name = _cityManagerOptions.DefaultCityName;
         }
     }
 }
