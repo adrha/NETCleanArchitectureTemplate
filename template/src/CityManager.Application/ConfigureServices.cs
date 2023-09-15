@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using CityManager.Application.Common.Interfaces.Services;
+using CityManager.Application.Common.Interfaces.Application.Services;
 using CityManager.Application.Services;
 
 using Microsoft.Extensions.Configuration;
@@ -15,6 +15,7 @@ public static class ConfigureServices
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         
         services.AddScoped<ICityService, CityService>();
+        services.AddScoped<IActivityService, ActivityService>();
         
         return services;
     }

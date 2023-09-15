@@ -1,9 +1,10 @@
 ﻿using CityManager.Application.Common.Interfaces;
 using CityManager.Infrastructure.Persistence;
-using CityManager.Infrastructure.Repositories;
-
 using System.Reflection;
-using CityManager.Application.Common.Interfaces.Repositories;
+using CityManager.Application.Common.Interfaces.Infrastructure.HttpClients.BoredApi;
+using CityManager.Application.Common.Interfaces.Infrastructure.Persistence.Repositories;
+using CityManager.Infrastructure.HttpClients.BoredApi;
+using CityManager.Infrastructure.Persistence.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +26,8 @@ public static class ConfigureServices
 
         services.AddScoped<IApplicationDbContextInitializer, ApplicationDbContextInitializer>();
         services.AddScoped<ICityRepository, CityRepository>();
+
+        services.AddScoped<IBoredApiClient, BoredApiClient>();
 
         return services;
     }

@@ -1,6 +1,6 @@
 ﻿using CityManager.Domain.Entities;
 
-namespace CityManager.Application.Common.Interfaces.Repositories;
+namespace CityManager.Application.Common.Interfaces.Infrastructure.Persistence.Repositories;
 
 public interface ICityRepository
 {

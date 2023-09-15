@@ -1,12 +1,12 @@
 ﻿using CityManager.Api.Contracts;
 using CityManager.Api.Contracts.InputModel;
 using CityManager.Api.Contracts.OutputModel;
-using CityManager.Application.Common.Interfaces.Repositories;
-using CityManager.Application.Common.Interfaces.Services;
 using CityManager.Application.Common.Dto;
 using CityManager.Application.Exceptions;
 
 using AutoMapper;
+using CityManager.Application.Common.Interfaces.Application.Services;
+using CityManager.Application.Common.Interfaces.Infrastructure.Persistence.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -48,7 +48,7 @@ public class CityController : CustomControllerBase
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Could get cities");
+            _logger.LogError(ex, "Could not get cities");
             return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
         }
     }
@@ -67,7 +67,7 @@ public class CityController : CustomControllerBase
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Could get cities");
+            _logger.LogError(ex, "Could not get cities");
             return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
         }
     }

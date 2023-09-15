@@ -11,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<CityManagerOptions>(
     builder.Configuration.GetSection(CityManagerOptions.OptionPosition));
 
+builder.Services.Configure<ActivityOptions>(
+    builder.Configuration.GetSection(ActivityOptions.OptionPosition));
+
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddApplicationServices(builder.Configuration);
 

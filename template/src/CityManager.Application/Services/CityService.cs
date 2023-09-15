@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using CityManager.Application.Common.Dto;
-using CityManager.Application.Common.Interfaces.Repositories;
-using CityManager.Application.Common.Interfaces.Services;
+using CityManager.Application.Common.Interfaces.Application.Services;
+using CityManager.Application.Common.Interfaces.Infrastructure.Persistence.Repositories;
 using CityManager.Application.Common.Options;
 using CityManager.Domain.Entities;
 using Microsoft.Extensions.Options;

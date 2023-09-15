@@ -1,8 +1,8 @@
 ﻿namespace CityManager.Application.Common.Options;
 
-public class CityManagerOptions
+public record CityManagerOptions
 {
-    public static string OptionPosition = "CityManagerOptions";
+    public const string OptionPosition = "CityManagerOptions";
     
     public string? DefaultCityName { get; init; }
 }
