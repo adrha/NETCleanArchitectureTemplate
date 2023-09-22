@@ -1,7 +1,7 @@
 ﻿using CityManager.Application.Common.Dto;
 using CityManager.Domain.Entities;
 
-namespace CityManager.Application.Common.Interfaces.Services;
+namespace CityManager.Application.Common.Interfaces.Application.Services;
 
 public interface ICityService
 {

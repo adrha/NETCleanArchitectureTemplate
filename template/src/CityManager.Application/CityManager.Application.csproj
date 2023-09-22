@@ -10,4 +10,9 @@
       <ProjectReference Include="..\CityManager.Domain\CityManager.Domain.csproj" />
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Common\Interfaces\Application\" />
+      <Folder Include="Common\Interfaces\Infrastructure\Persistence\" />
+    </ItemGroup>
 </Project>

@@ -15,7 +15,9 @@
           "condition": "(!Docker)",
           "exclude": [
             "src/CityManager.Api/Dockerfile",
-            "src/CityManager.Api/.dockerignore"
+            "src/CityManager.Api/.dockerignore",
+            "src/CityManager.Api/docker-postgres-init.sh",
+            "src/CityManager.Api/docker-compose.yml"
           ]
         },
         {

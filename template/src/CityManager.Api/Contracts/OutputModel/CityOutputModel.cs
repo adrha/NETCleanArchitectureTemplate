@@ -2,17 +2,17 @@
 
 namespace CityManager.Api.Contracts.OutputModel;
 
-public class CityOutputModel
+public record CityOutputModel
 {
     [DataMember(Name="id")]
-    public Guid Id { get; set; }
+    public Guid Id { get; init; }
     
     [DataMember(Name="name")]
-    public string Name { get; set; }
+    public string? Name { get; init; }
     
     [DataMember(Name="bfsId")]
-    public int BfsId { get; set; }
+    public int BfsId { get; init; }
     
     [DataMember(Name="cantonId")]
-    public int CantonId { get; set; }
+    public int CantonId { get; init; }
 }

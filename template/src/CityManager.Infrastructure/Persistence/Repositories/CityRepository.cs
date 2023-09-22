@@ -1,11 +1,9 @@
-﻿using CityManager.Application.Common.Interfaces.Repositories;
+﻿using CityManager.Application.Common.Interfaces.Infrastructure.Persistence.Repositories;
 using CityManager.Application.Exceptions;
 using CityManager.Domain.Entities;
-using CityManager.Infrastructure.Persistence;
-
 using Microsoft.EntityFrameworkCore;
 
-namespace CityManager.Infrastructure.Repositories;
+namespace CityManager.Infrastructure.Persistence.Repositories;
 
 public class CityRepository : ICityRepository
 {

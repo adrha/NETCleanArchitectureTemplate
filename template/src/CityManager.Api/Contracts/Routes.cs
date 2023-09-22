@@ -12,5 +12,11 @@ public static class Routes
             public const string CitiesRoute = Base + "/cities";
             public const string CityRoute = CitiesRoute + "/{id}";
         }
+        
+        public static class Activities
+        {
+            public const string ActivitiesRoute = Base + "/activities";
+            public const string RandomActivityRoute = ActivitiesRoute + "/random";
+        }
     }
 }

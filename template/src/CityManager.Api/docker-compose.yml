@@ -1,0 +1,28 @@
+﻿# For local development purposes only
+
+services:
+  citymanager.api:
+    build: .
+    ports:
+      - 80:80
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=citymanager.db;Port=5432;Database=CityManager;Username=CityManager;Password=CityManager
+    depends_on: 
+    - citymanager.db
+  
+  # You can start this service as stand-alone to provide a local database for your development environment.
+  # Initially, a matching application database and a user will be created according to the definitions in "docker-postgres-init.sh"
+  citymanager.db:
+    image: postgres:15
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=secret
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./docker-postgres-init.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+
+volumes:
+  db_data:
+  

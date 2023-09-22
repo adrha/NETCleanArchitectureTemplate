@@ -2,19 +2,19 @@
 
 namespace CityManager.Domain.Entities;
 
-public class City
+public record City
 {
-    public Guid Id { get; set; }
+    public Guid Id { get; init; }
     
-    public string Name { get; set; }
+    public string? Name { get; init; }
     
-    public bool IsActive { get; set; }
+    public bool IsActive { get; init; }
     
-    public CityType CityType { get; set; }
+    public CityType CityType { get; init; }
     
-    public int? BfsId { get; set; }
+    public int? BfsId { get; init; }
     
-    public int? CantonId { get; set; }
+    public int? CantonId { get; init; }
     
-    public DateTime Created { get; set; }
+    public DateTime Created { get; init; }
 }
