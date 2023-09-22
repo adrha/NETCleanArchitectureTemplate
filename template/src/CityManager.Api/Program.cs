@@ -70,3 +70,8 @@ app.MapControllers();
 app.UseHealthChecks("/health");
 
 app.Run();
+
+/* partial-class hack needed to use it from the functional-tests */
+public partial class Program
+{
+}

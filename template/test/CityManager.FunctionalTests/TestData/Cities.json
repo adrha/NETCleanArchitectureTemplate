@@ -1,0 +1,47 @@
+[
+  {
+    "Id": "b5519bef-149f-4e4b-a6c0-b2c7fed24b42",
+    "Name": "Bern",
+    "IsActive": "true",
+    "CityType": 0,
+    "BfsId": 11339,
+    "CantonId": 1,
+    "Created": "2023-09-22 14:53:23+00"
+  },
+  {
+    "Id": "2eb6c4e9-5932-4f0d-80aa-707e5566c952",
+    "Name": "Zürich",
+    "IsActive": "true",
+    "CityType": 0,
+    "BfsId": 22345,
+    "CantonId": 2,
+    "Created": "2023-09-22 14:54:17+00"
+  },
+  {
+    "Id": "9b4b5af1-e7c3-4f20-8a17-e42336993de0",
+    "Name": "Basel",
+    "IsActive": "false",
+    "CityType": 0,
+    "BfsId": 552,
+    "CantonId": 3,
+    "Created": "2023-09-22 14:54:44+00"
+  },
+  {
+    "Id": "0004204e-64f2-4992-8ad1-3a45a9498ea3",
+    "Name": "Bumpana",
+    "IsActive": "true",
+    "CityType": 1,
+    "BfsId": null,
+    "CantonId": null,
+    "Created": "2023-09-22 14:55:10+00"
+  },
+  {
+    "Id": "03a21055-b7d7-4617-b423-b7e26897430c",
+    "Name": "Dietlikon",
+    "IsActive": "true",
+    "CityType": 0,
+    "BfsId": 22333,
+    "CantonId": 2,
+    "Created": "2023-09-22 14:55:47+00"
+  }
+]
