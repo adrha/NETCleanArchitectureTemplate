@@ -19,7 +19,8 @@ public class TestApplicationDbContextInitializer : IApplicationDbContextInitiali
     
     public Task InitializeAsync()
     {
-        throw new NotImplementedException();
+        // Nothing to do here...
+        return Task.CompletedTask;
     }
 
     public async Task SeedAsync()

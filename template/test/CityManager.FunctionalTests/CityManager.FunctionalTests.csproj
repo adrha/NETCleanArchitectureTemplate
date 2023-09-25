@@ -25,6 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\src\CityManager.Api\CityManager.Api.csproj" />
       <ProjectReference Include="..\..\src\CityManager.Infrastructure\CityManager.Infrastructure.csproj" />
     </ItemGroup>
 
@@ -32,6 +33,13 @@
       <None Update="appsettings.Testing.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="TestData\Cities.json" />
+      <Content Include="TestData\Cities.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 
