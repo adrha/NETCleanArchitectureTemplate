@@ -1,4 +1,5 @@
 ﻿using System.Runtime.Serialization;
+using CityManager.Api.Contracts.Enum;
 
 namespace CityManager.Api.Contracts.OutputModel;
 
@@ -15,4 +16,7 @@ public record CityOutputModel
     
     [DataMember(Name="cantonId")]
     public int CantonId { get; init; }
+    
+    [DataMember(Name="cityType")]
+    public CityType CityType { get; init; }
 }
