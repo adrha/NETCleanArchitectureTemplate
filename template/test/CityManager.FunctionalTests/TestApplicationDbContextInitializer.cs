@@ -28,7 +28,7 @@ public class TestApplicationDbContextInitializer : IApplicationDbContextInitiali
         await LoadDataAsync<City>(CitySampleDataFilePath);
     }
 
-    private async Task LoadDataAsync<T>(string file)
+    private async Task LoadDataAsync<T>(string file) where T : EntityBase
     {
         string fileContent = await File.ReadAllTextAsync(file);
         List<T>? items = JsonConvert.DeserializeObject<List<T>>(fileContent);
@@ -38,16 +38,7 @@ public class TestApplicationDbContextInitializer : IApplicationDbContextInitiali
             return;
         }
 
-        switch (items)
-        {
-            case List<City> cities:
-                await _context.Cities.AddRangeAsync(cities);
-                break;
-
-            default:
-                throw new NotImplementedException($"Adding items of type {items.GetType()} not supported yet!");
-        }
-        
+        await _context.AddRangeAsync(items);
         await _context.SaveChangesAsync();
     }
 }

@@ -2,10 +2,8 @@
 
 namespace CityManager.Domain.Entities;
 
-public record City
+public record City : EntityBase
 {
-    public Guid Id { get; init; }
-    
     public string? Name { get; init; }
     
     public bool IsActive { get; init; }
