@@ -24,7 +24,7 @@ public class TestWebApplicationFactory <TProgram> : WebApplicationFactory<TProgr
             services.AddDbContext<ApplicationDbContext>(options =>
             {
                 // Each test class gets it's own database with a new set of test data
-                options.UseInMemoryDatabase($"Pfister.RfidApi.{_inMemoryDatabaseId}");
+                options.UseInMemoryDatabase($"CityManager.API.{_inMemoryDatabaseId}");
             });
             
             services.AddScoped<IApplicationDbContextInitializer, TestApplicationDbContextInitializer>();
