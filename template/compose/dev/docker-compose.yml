@@ -17,4 +17,4 @@ services:
 
 volumes:
   db-data:
-    name: cityManager-db-data
+    name: citymanager-db-data
