@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 
-namespace CityManager.FunctionalTests.ControllerTests;
+namespace CityManager.FunctionalTests.Controllers;
 
 public class ActivityControllerTests : ControllerTestBase
 {

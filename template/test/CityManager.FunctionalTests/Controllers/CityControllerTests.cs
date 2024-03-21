@@ -7,7 +7,7 @@ using CityManager.Api.Contracts.OutputModel;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Newtonsoft.Json;
 
-namespace CityManager.FunctionalTests.ControllerTests;
+namespace CityManager.FunctionalTests.Controllers;
 
 public class CityControllerTests : ControllerTestBase
 {

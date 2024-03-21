@@ -9,7 +9,7 @@ variables:
 
 unittests:
   stage: test
-  image: mcr.microsoft.com/dotnet/sdk:7.0
+  image: mcr.microsoft.com/dotnet/sdk:8.0
   script:
     - "cd test/CityManager.UnitTests"
     - "dotnet restore"
@@ -25,7 +25,7 @@ unittests:
               
 functionaltests:
   stage: test
-  image: mcr.microsoft.com/dotnet/sdk:7.0
+  image: mcr.microsoft.com/dotnet/sdk:8.0
   script:
     - "cd test/CityManager.FunctionalTests"
     - "dotnet restore"

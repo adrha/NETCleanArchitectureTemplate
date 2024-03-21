@@ -61,9 +61,6 @@ artifacts/
 # StyleCop
 StyleCopReport.xml
 
-# Env-Variables
-launchSettings.json
-
 # Files built by Visual Studio
 *_i.c
 *_p.c

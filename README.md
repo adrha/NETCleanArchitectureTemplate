@@ -12,7 +12,7 @@
 > Rider does currently not support all functionalities of the solution-generation, that is being used in this template.
 
 ## Technologies
-- ASP .NET 7
-- EF Core 7.0
-- Automapper 12
-- PostgreSQL
+- ASP .NET 8
+- EF Core 8.0
+- Automapper 13
+- PostgreSQL v16
